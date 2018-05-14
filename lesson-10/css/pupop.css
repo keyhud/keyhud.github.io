@@ -1,0 +1,12 @@
+.center{
+  position: fixed;
+  width: 300px;
+  height: 400px;
+  top:50%;
+  left:50%;
+  margin-top: -200px;
+  margin-left: -150px;
+  background: #fff;
+  border: 2px solid grey;
+  padding: 20px 30px;
+}

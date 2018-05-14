@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#main{
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+header{
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  background-color: #000;
+}
+.links{
+  top: 50%;
+  margin-top: -10px;
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+
+}
+a{
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 50px;
+  display: inline-block;
+  text-decoration: none;
+}
