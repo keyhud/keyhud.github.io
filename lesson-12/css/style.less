@@ -1,0 +1,83 @@
+@base-black: #706b73;
+@base-red: #fa9a87;
+@base-white: #000;
+.OSansReg {
+	font-family: 'Open Sans';
+	font-weight: 400; 
+}
+#main{
+		margin-top: 3%;
+}
+.main{
+	&-head{
+		width: 100%;
+		height: 55px;
+	}
+	&_nav{
+		position: relative;
+		&_link{
+			width: 50px;
+			height: 50px;
+			right: 0;
+			position: absolute;
+		}
+		&_burger{
+			position: absolute;
+			display: inline-block;
+			margin-top: 22px;
+			right: 0;
+			width: 35px;
+			height: 4px;
+			background-color: @base-black;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-ms-border-radius: 10px;
+			-o-border-radius: 10px;
+			border-radius: 10px;
+		}
+		&_burger::after{
+			position: absolute;
+			content: '';
+			display: inline-block;
+			width: 35px;
+			height: 4px;
+			margin-top: 8px;
+			background-color: @base-black;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-ms-border-radius: 10px;
+			-o-border-radius: 10px;
+			border-radius: 10px; 
+		}
+		&_burger::before{
+			position: absolute;
+			content: '';
+			display: inline-block;
+			width: 35px;
+			height: 4px;
+			margin-top: -8px;
+			background-color: @base-black;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			-ms-border-radius: 10px;
+			-o-border-radius: 10px;
+			border-radius: 10px; 
+		}
+	}
+}
+.border_logo{
+	.OSansReg;
+	font-size: 37px;
+	width: 155px;
+	height: 55px;
+	border: 3px solid @base-black;
+	line-height: 50%;
+}
+.border_logo {
+	p::first-letter{
+	color: @base-red;
+	}
+ 	p{
+	margin-top: 13px;
+	}
+}
