@@ -1,83 +1,148 @@
-@base-black: #706b73;
-@base-red: #fa9a87;
-@base-white: #000;
-.OSansReg {
-	font-family: 'Open Sans';
-	font-weight: 400; 
+@base_black: #6f6f6f;
+@base_red: #fc7254;
+@base_bgc: #f5f5f5;
+@base_white: #fff;
+.base_fsize{
+	font-size: 16px;
+}
+.opn_bold{
+		font-family: 'Open Sans';
+		font-weight: 600;
+}
+.opn_reg{
+		font-family: 'Open Sans';
+		font-weight: 400;
+}
+input, button, textarea{
+	&:focus{
+	outline: none;
+	}
 }
 #main{
-		margin-top: 3%;
+	color: @base_black;
+	.opn_reg;
+	background-color: @base_bgc;
+	min-height:700px;
+	height: 100vh;
 }
 .main{
-	&-head{
-		width: 100%;
+	&_head{
+		padding-top: 3%;
+	}
+	&_border_logo{
+		width: 155px;
 		height: 55px;
+		border: 3px solid lighten(@base_black, 10%);
+		line-height: 48px;
+		font-size: 37px;
+		text-align: center;
+		.opn_bold
+	}
+	&_border_logo p::first-letter{
+		color: lighten(@base_red, 10%);
 	}
 	&_nav{
 		position: relative;
-		&_link{
-			width: 50px;
-			height: 50px;
+		&_link {
+		    position: relative;
+		    height: 55px;
+		    width: 55px;
+		    float: right;
+		}
+		&_burger {
+			position: absolute;
 			right: 0;
-			position: absolute;
-		}
-		&_burger{
-			position: absolute;
 			display: inline-block;
-			margin-top: 22px;
-			right: 0;
-			width: 35px;
 			height: 4px;
-			background-color: @base-black;
-			-webkit-border-radius: 10px;
-			-moz-border-radius: 10px;
-			-ms-border-radius: 10px;
-			-o-border-radius: 10px;
-			border-radius: 10px;
-		}
-		&_burger::after{
-			position: absolute;
-			content: '';
-			display: inline-block;
-			width: 35px;
-			height: 4px;
-			margin-top: 8px;
-			background-color: @base-black;
-			-webkit-border-radius: 10px;
-			-moz-border-radius: 10px;
-			-ms-border-radius: 10px;
-			-o-border-radius: 10px;
-			border-radius: 10px; 
-		}
-		&_burger::before{
-			position: absolute;
-			content: '';
-			display: inline-block;
-			width: 35px;
-			height: 4px;
-			margin-top: -8px;
-			background-color: @base-black;
-			-webkit-border-radius: 10px;
-			-moz-border-radius: 10px;
-			-ms-border-radius: 10px;
-			-o-border-radius: 10px;
-			border-radius: 10px; 
+			width: 30px;
+			background: #706b73;
+			top: 50%;
+			margin-top: -1px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-o-border-radius: 5px;
+			border-radius: 5px;
+			&::after, &::before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				width: 30px;
+				height: 4px;
+				background-color: #706b73;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-o-border-radius: 5px;
+			border-radius: 5px;
+			}
+			&::before {
+				--webkit-transform: translateY(7px);
+				-ms-transform: translateY(7px);
+				-o-transform: translateY(7px);
+				transform: translateY(7px);
+			}
+			&::after{
+				--webkit-transform: translateY(-7px);
+				-ms-transform: translateY(-7px);
+				-o-transform: translateY(-7px);
+				transform: translateY(-7px);
+			}
 		}
 	}
-}
-.border_logo{
-	.OSansReg;
-	font-size: 37px;
-	width: 155px;
-	height: 55px;
-	border: 3px solid @base-black;
-	line-height: 50%;
-}
-.border_logo {
-	p::first-letter{
-	color: @base-red;
+	&_text{
+		text-align: center;
+		margin-top: 5%;
+		h1{
+			span{
+				color: @base_red;
+			}
+			.opn_bold;
+			font-size: 50px;
+		}
+		p{
+			padding-top: 1%;
+			.base_fsize;
+			.opn_reg;
+		}
 	}
- 	p{
-	margin-top: 13px;
+	&_form{
+		margin-top: 1%;
+		padding: 25px;
+		background-color: @base_white;
+		box-shadow: 0px 0px 57px 0px rgba(20,20,20,0.2);
+		text-align: center;
+		p{
+			font-size: 20px;
+			.opn_bold;
+			span{
+				color: @base_red;
+			}
+		}
+		input, textarea{
+			border: 0;
+			border-bottom: 1px solid lighten(@base_black, 5%);
+			width: 100%;
+			margin-top: 25px;
+			color: @base_black;
+			font-size: 15px;
+		}
+		textarea{
+			resize: none;
+		}
+		button{
+			font-size: 16px;
+			margin-top: 15px;
+			padding: 15px 45px;
+			color: @base_white;
+			background-color: @base_red;
+			border: none;
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			-ms-border-radius: 50px;
+			-o-border-radius: 50px;
+			border-radius: 50px;
+			cursor: pointer;
+		}
 	}
 }
